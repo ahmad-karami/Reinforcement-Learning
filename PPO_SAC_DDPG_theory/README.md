@@ -40,7 +40,8 @@ $$
 ### Advantage Value:
 ***Measures how much an action is better than the average of other actions in a given state.***
 
-![Figure 1](.//Images//Actor_Critic.jpg "Advantage value")
+![Figure 1](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/Actor_Critic.jpg)
+
 
 #### Why Use the Advantage Value?
 We can further reduce variance by subtracting a baseline from $Q(s_{i,t}, a_{i,t})$ without altering the expectation of $\nabla_\theta J(\theta)$, making it an unbiased estimator:
@@ -79,7 +80,7 @@ $$
 
 Consider a penalty shootout game to illustrate the concept of the advantage function and Q-values in reinforcement learning.
 
-![Figure 2](.//Images//Football.png "penalty shootout game")
+![Figure 2](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/Football.png)
 
 ##### Game Setup:
 - A goalie always jumps to the right to block the shot.
@@ -230,7 +231,8 @@ To mitigate this issue, two main solutions are commonly used:
 #### Parallel Actor-Critic (Online)
 Many high-performance implementations are based on the actor critic approach. For large problems, the algorithm is typically parallelized and implemented on a large cluster computer.
 
-![Figure 3](.//Images//Parallel.jpg "Parallel Actor-Critic framework")
+![Figure 3](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/Parallel.jpg)
+
 
 To reduce variance, multiple actors are used to update the policy. There are two main approaches:
 
@@ -244,7 +246,7 @@ In the off-policy approach, we maintain a replay buffer to store past experience
 
 offpolicy.png
 
-![Figure 4](.//Images//offpolicy.png "Replay buffer")
+![Figure 4](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/offpolicy.png)
 
 
 **Off-policy actor-critic algorithm:**
@@ -275,7 +277,8 @@ The idea with Proximal Policy Optimization (PPO) is that we want to improve the 
 1. We know empirically that smaller policy updates during training are more likely to converge to an optimal solution.
 2. If we change the policy too much, we may end up with a bad policy that cannot be improved.
 
-![Figure 5](.//Images//cliff.jpg "effect of small steps in updating")
+![Figure 5](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/cliff.jpg)
+
 
 Therefore, in order not to allow the current policy to change much compared to the previous policy, we limit the ratio of these two policies to  $[1 - \epsilon, 1 + \epsilon]$.
 
@@ -324,7 +327,8 @@ The below figure shows
 
 #### Visualize the Clipped Surrogate Objective
 
-![Figure 6](.//Images//recap.jpg "effect of small steps in updating")
+![Figure 6](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/recap.png)
+
 
 ### PPO pseudocode
 
@@ -409,7 +413,8 @@ In essence, SAC seeks to maximize the entropy in policy, in addition to the expe
 We can think of entropy as how unpredictable a random variable is. If a random variable always takes a single value then it has zero entropy because it’s not unpredictable at all. If a random variable can be any Real Number with equal probability then it has very high entropy as it is very unpredictable.
 
 
-![Figure 7](.//Images//PPO.jpg "entropy in Categorical and Gaussian distribution")
+![Figure 7](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/PPO.jpg)
+
 
 
 *probability distributions with low entropy have a tendency to greedily sample certain values, as the probability mass is distributed relatively unevenly.*
@@ -467,7 +472,8 @@ The idea with Proximal Policy Optimization (PPO) is that we want to improve the 
 1. We know empirically that smaller policy updates during training are more likely to converge to an optimal solution.
 2. If we change the policy too much, we may end up with a bad policy that cannot be improved.
 
-![Figure 5](.//Images//cliff.jpg "effect of small steps in updating")
+![Figure 8](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/cliff.jpg)
+
 
 Therefore, in order not to allow the current policy to change much compared to the previous policy, we limit the ratio of these two policies to  $[1 - \epsilon, 1 + \epsilon]$.
 
@@ -516,7 +522,8 @@ The below figure shows
 
 #### Visualize the Clipped Surrogate Objective
 
-![Figure 6](.//Images//recap.jpg "effect of small steps in updating")
+![Figure 9](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/PPO_SAC_DDPG_theory/images/orecap.jpg)
+
 
 ### PPO pseudocode
 
@@ -599,9 +606,6 @@ In essence, SAC seeks to maximize the entropy in policy, in addition to the expe
 
 ### what is entropy?
 We can think of entropy as how unpredictable a random variable is. If a random variable always takes a single value then it has zero entropy because it’s not unpredictable at all. If a random variable can be any Real Number with equal probability then it has very high entropy as it is very unpredictable.
-
-
-![PPO Diagram](entropy.jpg "*entropy in Categorical and Gaussian distribution*")
 
 
 *probability distributions with low entropy have a tendency to greedily sample certain values, as the probability mass is distributed relatively unevenly.*
