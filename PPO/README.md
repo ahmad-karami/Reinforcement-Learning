@@ -1,4 +1,4 @@
-# REINFORCE & PPO
+# REINFORCE & PPO algorithms
 
 This notebook implements two on-policy deep reinforcement learning algorithms using PyTorch.
 - The first part trains a REINFORCE agent on the classic control `CartPole-v1` environment, including environment exploration, policy network design, and return-based policy updates.
