@@ -1,5 +1,3 @@
-# Week 4: Advanced Methods	
-
 ## Actor_Critic
 
 The variance of policymethods can originate from two sources:
