@@ -8,3 +8,12 @@ In **SAC_DDPG_continuous.ipynb** notebook, we implement and compare Deep Determi
 
 ![](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/SAC_DDPG/assets/DDPG.png)
 ![](https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/SAC_DDPG/assets/SAC.png)
+
+
+
+
+<img src="https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/SAC_DDPG/assets/CartPole.gif" alt="CartPole SAC vs DDPG" width="450">
+
+<img src="https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/SAC_DDPG/assets/DDPG.png" alt="DDPG Architecture" width="450">
+
+<img src="https://github.com/ahmad-karami/Reinforcement-Learning/blob/main/SAC_DDPG/assets/SAC.png" alt="SAC Architecture" width="450">
